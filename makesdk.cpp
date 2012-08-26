@@ -6,6 +6,7 @@
 
 #include <iostream>
 #include <ctime>
+#include <iomanip>
 #include <cstdlib>
 using namespace std;
 
@@ -13,41 +14,57 @@ using namespace std;
 //Constants
 const int ROW = 9;
 const int COL = 9;
-//const int BOX = 9; 
 
-bool testRow(int array[COL][ROW], int colNum)
+void setRow(int array[COL][ROW], int colNum)
 {
-  bool result = false;
-
-  for(int c = 0; c < ROW; c++)
+  for(int r = 0; r < ROW; r++)
   {
-    int x = 0;
-    if(array[colNum][ROW] != array[colNum][ROW + 1]) x++;
-    if(x > ROW - 2) result = true;
-  }
-  return result;
-}
+    int i = r;
 
+    if(r == 0)
+    {
+      array[colNum][r] = rand() % 9 + 1;
+    }
+    else
+    {
+      array[colNum][r] = rand() % 9 + 1;
 
-
-void populate(int array[COL][ROW])
-{ 
-  for(int c = 0; c < COL; c++)
-  { 
-    for(int x = 0; x < ROW; x++)
-    { 
-    array[c][x] = 10;
+      while(i > 0)
+      {
+        while(array[colNum][r] == array[colNum][r - i])
+          array[colNum][r] = rand() % 9 + 1;
+        i--;
+      }
     }
   }
 }
+
+//void setCol(int array[COL][ROW], int rowNum)
+//{
+//  for(int c = 0; c < COL; c++)
+//  {
+//    array[rowNum][c] = rand() % 9 + 1;
+//  }  
+//}
+
+//void populate(int array[COL][ROW])
+//{ 
+//  for(int c = 0; c < COL; c++)
+//  { 
+//    for(int r = 0; r < ROW; r++)
+//    {
+//      array[c][r] = 10;
+//    }
+//  }
+//}
   
 void show(int array[COL][ROW])
 {
   for(int c = 0; c < COL; c++)
   {
-    for(int x = 0; x < ROW; x++)
+    for(int r = 0; r < ROW; r++)
     {
-    cout << array[c][x] << " ";
+      cout << setw(2) << array[c][r];
     }
   cout << endl;
   }
@@ -56,18 +73,13 @@ void show(int array[COL][ROW])
 int main()
 {
   srand(time(0));
-  //const int NUM[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
   int boxArray[COL][ROW];
  
-  populate(boxArray);
-  //show(boxArray);
+//  populate(boxArray);
   
   for(int i = 0; i < COL; i++)
   {
-    while(testRow(boxArray, i))
-    {
-      boxArray[i][0] = rand() % 9 + 1;
-    } 
+    setRow(boxArray, i);
   }
   show(boxArray); 
 
