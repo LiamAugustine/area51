@@ -1,0 +1,8 @@
+
+# SASS cache #
+##############
+.sass-cache
+
+# Diagnostic #
+##############
+style/diagnostic.css
