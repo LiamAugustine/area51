@@ -84,7 +84,7 @@ footer {
   width: 100%;
   font-size: 1em; }
 
-#japan {
+.japan {
   font-family: "?????? Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "????", Meiryo, "MS P????", "MS PGothic", sans-serif; }
 
 .paper {
@@ -170,28 +170,32 @@ footer {
   padding-bottom: 1em;
   padding-left: 0em; }
 
-.subtitle {
-  font-size: 1.8em;
+.subtitle, .english-subtitle {
+  font-size: 1em;
   font-weight: bold;
-  text-decoration: underline;
   clear: right;
   padding-top: 1em;
   padding-right: 0em;
   padding-bottom: 0.2em;
   padding-left: 0em; }
 
-.organization, .date, .location {
-  font-weight: bold;
-  width: 30%; }
+.english-subtitle {
+  font-size: 1.8em;
+  text-decoration: underline; }
 
 .organization {
+  font-weight: bold;
   text-align: left;
   width: 40%; }
 
 .date {
+  width: 30%;
+  font-weight: bold;
   text-align: center; }
 
 .location {
+  width: 30%;
+  font-weight: bold;
   text-align: right; }
 
 .border {
@@ -207,6 +211,12 @@ footer {
     padding-right: 2.5em;
     padding-bottom: 0.25em;
     padding-left: 2.5em; }
+
+#pr {
+  text-align: justify; }
+
+#education {
+  margin-left: 2em; }
 
 #home {
   margin-left: 8em; }

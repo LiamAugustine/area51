@@ -248,14 +248,12 @@ $linear-g: "(top, #9999ff 0%, #fff 8%) 0 0.3em";
 		left: 0em;
 	} 
 }
-
 .subtitle{
   font:{
-		size: 1.8em;
+		size: 1em;
 		weight: bold;
 	}
-  text-decoration: underline;
-  clear: right;
+	clear: right;
   padding:{
 		top: 1em;
 		right: 0em;
@@ -263,19 +261,31 @@ $linear-g: "(top, #9999ff 0%, #fff 8%) 0 0.3em";
 		left: 0em;
 	}
 }
+.english-subtitle{
+  @extend .subtitle;
+  font-size: 1.8em;
+  text-decoration: underline;
+}
 
-.organization, .date, .location{
+@mixin bold{
   font-weight: bold;
+}
+@mixin width{
   width: 30%;
 }
 .organization{
+	@include bold;
   text-align: left;
   width: 40%;
 }
 .date{
+	@include width;
+	@include bold;
   text-align: center;
 }
 .location{
+	@include width;
+	@include bold;
   text-align: right;
 }
 
@@ -300,6 +310,12 @@ $linear-g: "(top, #9999ff 0%, #fff 8%) 0 0.3em";
 	}
 }
 
+#pr{
+	text-align: justify;
+}
+#education{
+	margin-left: 2em;
+}
 #home{
   margin-left: 8em;
 }
