@@ -9,7 +9,13 @@
     -->
     <meta charset='UTF-8' />
     <meta description='My very first homepage.' />
-    <title>James Standeven - Homepage</title>     
+    <title>James Standeven - Homepage</title>
+		<script type='text/javascript' >
+		/*  Should make all browsers recongize header, footer and nav semantic elements. */
+			document.createElement("header");
+			document.createElement("footer");
+			document.createElement("nav");
+		</script>
     <link rel='stylesheet' type='text/css' href='style/style.css' />    
   </head>
   <body>
@@ -17,11 +23,11 @@
       James Standeven
     </header>
     <nav class='border' >
-      <a title='This uses JavaScript to reveal the Homepage.' href='#' id='home' onclick='turnPage(this)' >Home</a>
-      <a title='This uses JavaScript to reveal my resume.' href='#' id='english' onclick='turnPage(this)' >English CV</a>
-      <a title='This uses JavaScript to reveal my resume in Japanese.' href='#' id='japanese' onclick='turnPage(this)' >Japanese CV</a>
+      <a title='This uses JavaScript to reveal the Homepage. It falls back to using href if javascript is disabled.' href='#top' id='home' onclick='turnPage(this)' >Home</a>
+      <a title='This uses JavaScript to reveal my resume. It falls back to using href if javascript is disabled.' href='#top-english' id='english' onclick='turnPage(this)' >English CV</a>
+      <a title='This uses JavaScript to reveal my resume in Japanese. It falls back to using href if javascript is disabled.' href='#top-japanese' id='japanese' onclick='turnPage(this)' >Japanese CV</a>
     </nav>
-    <div class='main' id='page1'>
+    <div class='main' id='top'>
       <div class="lined paper" >
         <div class="head"></div>
           <h1 class='title'>A letter to my guests</h1>
@@ -38,13 +44,13 @@
 					<p>James Standeven</p>
       </div>
     </div>
-    <div class='main' id='page2'>
+    <div class='main' id='top-english'>
       <div class="paper">
         <div class="head"></div>
           <div class='title'>James Standeven</div>
-          <div class='info'><strong>Address:</strong> #2314 4-2-4 Kounan, Minato-ku, Tokyo, Japan 108-0075<br />
-          <strong>E-mail:</strong> <a href='mailto:james.standeven@hotmail.com'>james.standeven@hotmail.com</a><br />
-          <strong>Phone:</strong> (090)9698-8800</div>
+          <div class='info'><b>Address:</b> #2314 4-2-4 Kounan, Minato-ku, Tokyo, Japan 108-0075<br />
+          <b>E-mail:</b> <a href='mailto:james.standeven@hotmail.com'>james.standeven@hotmail.com</a><br />
+          <b>Phone:</b> (090)9698-8800</div>
           <p class='subtitle'>Objective</p>
           <p>A newly graduated College student looking to use the skills already gained to build a career as an IT Professional. As well as eventually earning a B.S. of Computer Science.</p>
           <p class='subtitle'>Education</p>
@@ -75,9 +81,9 @@
           </table>
           <p class='subtitle'>Computer Skills</p>
           <table>
-            <tr><td class='bold' >Operating Systems:</td><td>Windows 7, and Linux (Arch/Mint/Lubuntu/BackTrack).</td></tr>
-            <tr><td class='bold' >Software:</td><td>Microsoft Office 2010, Oracle VM VirtualBox, Apache Web Server, and Dreamweaver CS6.</td></tr>
-            <tr><td class='bold' >Programming Languages:</td><td>C++, Java, Visual Basic, JavaScript, PHP, HTML, CSS, and MySQL.</td></tr>
+            <tr><td> <b>Operating Systems:</b></td><td>Windows 7, and Linux (Arch/Mint/Lubuntu/BackTrack).</td></tr>
+            <tr><td> <b>Software:</b></td><td>Microsoft Office 2010, Oracle VM VirtualBox, Apache Web Server, and Dreamweaver CS6.</td></tr>
+            <tr><td> <b>Programming Languages:</b></td><td>C++, Java, Visual Basic, JavaScript, PHP, HTML, CSS, and MySQL.</td></tr>
           </table>
           <p class='subtitle'>Employment History</p>
           <table>  
@@ -136,13 +142,12 @@
           <p>Available upon request.</p>
       </div>
     </div>
-    <div class='main' id='page3'>
-      <div class="paper">
+    <div class='main' id='top-japanese'>
+      <div class="paper" id='japan'>
         <div class="head"></div>
           <div class='title'>職務経歴書（サンプル）</div>
-          <div class='info'><strong>Address:</strong> #2314 4-2-4 Kounan, Minato-ku, Tokyo, Japan 108-0075<br />
-          <strong>E-mail:</strong> <a href='mailto:james.standeven@hotmail.com'>james.standeven@hotmail.com</a><br />
-          <strong>Phone:</strong> (090)9698-8800</div>
+          <div class='info'>2013年7月25日現在<br />
+					氏名：スタンディーブン　ジェームス　ウィリアム</div>
           <p class='subtitle'>Objective</p>
           <p>A newly graduated College student looking to use the skills already gained to build a career as an IT Professional. As well as eventually earning a B.S. of Computer Science.</p>
           <p class='subtitle'>Education</p>
@@ -173,9 +178,9 @@
           </table>
           <p class='subtitle'>Computer Skills</p>
           <table>
-            <tr><td class='bold' >Operating Systems:</td><td>Windows 7, and Linux (Arch/Mint/Lubuntu/BackTrack).</td></tr>
-            <tr><td class='bold' >Software:</td><td>Microsoft Office 2010, Oracle VM VirtualBox, Apache Web Server, and Dreamweaver CS6.</td></tr>
-            <tr><td class='bold' >Programming Languages:</td><td>C++, Java, Visual Basic, JavaScript, PHP, HTML, CSS, and MySQL.</td></tr>
+            <tr><td> <b>Operating Systems:</b></td><td>Windows 7, and Linux (Arch/Mint/Lubuntu/BackTrack).</td></tr>
+            <tr><td> <b>Software:</b></td><td>Microsoft Office 2010, Oracle VM VirtualBox, Apache Web Server, and Dreamweaver CS6.</td></tr>
+            <tr><td> <b>Programming Languages:</b></td><td>C++, Java, Visual Basic, JavaScript, PHP, HTML, CSS, and MySQL.</td></tr>
           </table>
           <p class='subtitle'>Employment History</p>
           <table>  

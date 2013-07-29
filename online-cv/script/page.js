@@ -3,20 +3,20 @@
   Created by: James Standeven
   Created: July 3, 2013
   Last Edited: July 5, 2013
-*/
-
-/*  Should make all browsers recongize header, footer and nav semantic elements. */
-  document.getElementById('page1').style.display = 'block';
-  document.getElementById('page2').style.display = 'none';
-  document.getElementById('page3').style.display = 'none';
+*/	
+	
+/* Set default page display on load*/	
+	document.getElementById('top').style.display = 'block';
+  document.getElementById('top-english').style.display = 'none';
+  document.getElementById('top-japanese').style.display = 'none';
 
 
 function turnPage(e){
   var element = e;
   if (element == null) element = event.srcElement;
-  var home = document.getElementById('page1');
-  var english = document.getElementById('page2');
-  var japanese = document.getElementById('page3');
+  var home = document.getElementById('top');
+  var english = document.getElementById('top-english');
+  var japanese = document.getElementById('top-japanese');
   if(element.id == 'home'){
     home.style.display ='block';
     english.style.display ='none';
