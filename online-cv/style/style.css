@@ -32,8 +32,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   line-height: 1; }
 
-ol, ul {
+ol {
   list-style: none; }
+
+ul {
+  list-style: disc; }
 
 blockquote, q {
   quotes: none; }
@@ -51,6 +54,7 @@ body {
   font-family: "Lucida Grande", Arial, Helvetica, sans-serif;
   font-size: 80%;
   width: 100%;
+  min-width: 37em;
   background-color: black;
   color: #ccffcc; }
 
@@ -62,11 +66,14 @@ a {
 td {
   vertical-align: top; }
 
+li {
+  margin-left: 3.5em; }
+
 header {
-  height: 1em;
-  font-family: windsong, cursive;
+  min-height: 1em;
+  font-family: "Lucida Console", Monaco, monospace;
   font-weight: 400;
-  font-size: 6em;
+  font-size: 4em;
   margin-top: 0.5em;
   margin-right: 0em;
   margin-bottom: 0.5em;
@@ -128,16 +135,18 @@ footer {
     border-right-style: solid;
     border-left-style: solid;
     border-color: #ff9999; }
-  .lined #body-text {
+  .lined .body-text {
     padding-top: 0em;
     padding-right: 0em;
-    padding-bottom: 2em;
+    padding-bottom: 2.35em;
     padding-left: 0em; }
+    .lined .body-text:first-letter {
+      margin-left: 2em; }
   .lined #signed {
     height: 1em;
     font-family: windsong, cursive;
     font-size: 3em;
-    padding-top: 0em;
+    padding-top: 0.7em;
     padding-right: 0em;
     padding-left: 0.5em;
     margin-bottom: -0.1em; }
@@ -211,14 +220,48 @@ footer {
     padding-right: 2.5em;
     padding-bottom: 0.25em;
     padding-left: 2.5em; }
+  .border #home {
+    margin-left: 8em; }
 
 #pr {
   text-align: justify; }
 
-#education {
-  margin-left: 2em; }
+.column1 {
+  padding-left: 2em;
+  width: 20%; }
 
-#home {
-  margin-left: 8em; }
+.column2 {
+  width: 80%; }
+
+#experience {
+  border-width: 0.2em;
+  border-style: solid;
+  border-color: black; }
+  #experience #c1 {
+    width: 20%; }
+  #experience #c2 {
+    width: 40%; }
+  #experience #c3 {
+    width: 20%; }
+  #experience #c4 {
+    width: 20%; }
+  #experience th {
+    background-color: #ccc;
+    border-width: 0.1em;
+    border-style: solid;
+    border-color: grey;
+    border-bottom-width: 0.2em;
+    border-bottom-color: black; }
+  #experience td {
+    border-left-width: 0.1em;
+    border-left-style: dotted;
+    border-left-color: grey;
+    border-top-width: 0.1em;
+    border-top-style: solid;
+    border-top-color: black; }
+    #experience td:first-child {
+      text-align: center; }
+    #experience td p {
+      padding-left: 2em; }
 
 /*# sourceMappingURL=style.css.map */
