@@ -1,8 +1,9 @@
 
-# SASS cache #
+# Generated files #
 ##############
 .sass-cache
+*.map
 
-# Diagnostic #
+# Unneeded Files #
 ##############
 style/diagnostic.css

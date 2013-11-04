@@ -1,0 +1,7 @@
+# Unneeded Files #
+##################
+porters.*
+
+# Generated #
+#############
+.metadata/
